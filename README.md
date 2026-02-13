@@ -12,6 +12,10 @@ A modern, high-performance developer portfolio built with clean UI, smooth anima
 
 ![Mobile Preview](images/mobile-preview.png)
 
+***
+## Live Preview
+[🌍live link](https://golu-dhama.github.io/manicsoul.dev/)
+
 ## ✨ Features
 
 * Fully Responsive Design
@@ -44,3 +48,4 @@ A modern, high-performance developer portfolio built with clean UI, smooth anima
 Frontend Developer & UI Engineer
 
 GitHub: https://github.com/golu-dhama
+
