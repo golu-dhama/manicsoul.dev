@@ -65,42 +65,39 @@
     document.querySelectorAll('section[id]').forEach(section => sectionObserver.observe(section));
   };
 
-  // ---------- MOBILE MENU ----------
-  const initMobileMenu = () => {
+  // ---------- SIDEBAR MENU ----------
+  const initSidebar = () => {
     const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.getElementById('main-nav');
-    const mobileLayout = window.matchMedia('(max-width: 900px)');
+    const sidebar = document.getElementById('site-sidebar');
 
-    const setMenu = (isOpen) => {
-      navMenu.classList.toggle('show', isOpen);
-      document.body.classList.toggle('menu-open', isOpen);
-      menuToggle.setAttribute('aria-expanded', String(isOpen));
-    };
+    menuToggle.addEventListener('click', () => {
+      sidebar.showModal();
+      menuToggle.setAttribute('aria-expanded', 'true');
+    });
+    sidebar.addEventListener('close', () => {
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
 
-    menuToggle.addEventListener('click', () => setMenu(!navMenu.classList.contains('show')));
-    navMenu.querySelectorAll('a').forEach(link => {
+    sidebar.querySelectorAll('.nav-list a').forEach(link => {
       link.addEventListener('click', () => {
-        if (!navMenu.classList.contains('show')) return;
-        setMenu(false);
+        sidebar.close();
         document.getElementById(link.hash.slice(1))?.focus({ preventScroll: true });
       });
     });
 
-    document.addEventListener('click', event => {
-      if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) setMenu(false);
-    });
-    document.addEventListener('keydown', event => {
-      if (event.key === 'Escape' && navMenu.classList.contains('show')) {
-        setMenu(false);
-        menuToggle.focus();
+    sidebar.addEventListener('click', event => {
+      if (event.target !== sidebar) return;
+      const bounds = sidebar.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX >= bounds.right ||
+          event.clientY < bounds.top || event.clientY >= bounds.bottom) {
+        sidebar.close();
       }
     });
-    mobileLayout.addEventListener('change', () => setMenu(false));
   };
 
   // ---------- MAGNETIC BUTTONS ----------
   const initMagneticButtons = () => {
-    const magnets = document.querySelectorAll('.primary-btn, .secondary-btn, .hire-btn');
+    const magnets = document.querySelectorAll('.primary-btn, .secondary-btn');
     magnets.forEach(btn => {
       btn.addEventListener('mousemove', function(e) {
         const rect = this.getBoundingClientRect();
@@ -311,7 +308,7 @@
   const init = () => {
     initTheme();
     initScrollObservers();
-    initMobileMenu();
+    initSidebar();
     initMagneticButtons();
     initCardLight();
     initRipple();
