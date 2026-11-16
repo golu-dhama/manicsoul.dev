@@ -1918,3 +1918,16 @@ body { padding-top: 120px !important; }
     grid-template-columns: 1fr;
   }
 }
+
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .theme-toggle:hover:not(:active),
+  .hire-btn:hover:not(:active),
+  .light-theme .hire-btn:hover:not(:active),
+  .primary-btn:hover,
+  .secondary-btn:hover,
+  .project-card .project-link:hover:not(:active),
+  .project-card .project-link:hover::after {
+    transform: none;
+  }
+  .project-card:hover { transform: translateZ(0); }
+}

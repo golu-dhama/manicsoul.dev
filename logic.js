@@ -101,16 +101,24 @@
   // ---------- MAGNETIC BUTTONS ----------
   const initMagneticButtons = () => {
     const magnets = document.querySelectorAll('.primary-btn, .secondary-btn, .hire-btn');
-    magnets.forEach(btn => {
-      btn.addEventListener('mousemove', function(e) {
-        const rect = this.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        this.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    magnets.forEach(button => {
+      const reset = () => { button.style.removeProperty('transform'); };
+
+      button.addEventListener('pointermove', event => {
+        if (event.pointerType !== 'mouse' || reducedMotion.matches) return;
+        const rect = button.getBoundingClientRect();
+        const x = event.clientX - rect.left - rect.width / 2;
+        const y = event.clientY - rect.top - rect.height / 2;
+        button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
       });
-      btn.addEventListener('mouseleave', function() {
-        this.style.transform = 'translate(0, 0)';
+      button.addEventListener('pointerdown', event => {
+        if (event.pointerType !== 'mouse') reset();
       });
+      button.addEventListener('pointerleave', reset);
+      button.addEventListener('pointercancel', reset);
+      reducedMotion.addEventListener('change', reset);
     });
   };
 
