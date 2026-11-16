@@ -171,6 +171,23 @@
     setTimeout(typeNext, 400);
   };
 
+  // ---------- PROJECT DISCLOSURE ----------
+  const initProjectDisclosure = () => {
+    const disclosure = document.querySelector('.projects-disclosure');
+    const summary = disclosure.querySelector('summary');
+
+    summary.addEventListener('click', () => {
+      if (!disclosure.open || getComputedStyle(summary).position !== 'sticky') return;
+      if (disclosure.getBoundingClientRect().top >= summary.getBoundingClientRect().top) return;
+
+      requestAnimationFrame(() => {
+        if (disclosure.open) return;
+        summary.focus({ preventScroll: true });
+        summary.scrollIntoView({ block: 'start', behavior: 'instant' });
+      });
+    });
+  };
+
   // ---------- PROJECT SEARCH ----------
   const initProjectSearch = () => {
     const search = document.getElementById('project-search');
@@ -248,6 +265,7 @@
     initCardLight();
     initRipple();
     initTypingEffect();
+    initProjectDisclosure();
     initProjectSearch();
     initEmailCopy();
     initGSAP();

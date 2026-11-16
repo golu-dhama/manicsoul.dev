@@ -1846,7 +1846,34 @@ body { padding-top: 120px !important; }
   border-width: 0 2px 2px 0;
   transform: translateY(-2px) rotate(45deg);
 }
+.projects-disclosure-collapse-label { display: none; }
 .projects-disclosure[open] summary { margin-bottom: 24px; }
+@media (max-width: 900px) {
+  body { overflow-x: clip; }
+
+  .projects-disclosure[open] > summary {
+    position: sticky;
+    top: 112px;
+    z-index: 3;
+    min-height: 48px;
+    padding: 4px 12px 4px 16px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px -14px rgb(0 0 0 / 48%);
+  }
+
+  .projects-disclosure[open] .projects-disclosure-copy { display: none; }
+  .projects-disclosure[open] .projects-disclosure-collapse-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .projects-disclosure[open] .projects-disclosure-chevron {
+    width: 36px;
+    height: 36px;
+  }
+  .projects-disclosure :is(a, button, input) { scroll-margin-top: 56px; }
+}
+
 .projects-disclosure[open] .projects-disclosure-chevron::before {
   transform: translateY(2px) rotate(225deg);
 }
