@@ -344,38 +344,71 @@ section:hover .section-header h2::after {
 
 /* TABLET + MOBILE */
 @media (max-width: 900px) {
-
-  .menu-toggle {
-    display: block;
-  }
+  .menu-toggle { display: block; }
 
   .main-nav {
-    visibility: hidden;
+    --menu-glass: linear-gradient(155deg, rgb(29 34 54 / 88%), rgb(13 18 33 / 74%));
+    --menu-edge: rgb(193 188 255 / 24%);
+    --menu-row: rgb(179 169 255 / 14%);
+    --menu-control: rgb(255 255 255 / 8%);
+    --menu-shadow: rgb(0 0 0 / 35%);
+    position: absolute;
+    inset: calc(100% + 10px) 0 auto auto;
+    width: min(100%, 308px);
+    min-width: 0;
+    max-height: calc(100dvh - 132px - env(safe-area-inset-bottom, 0px));
     overflow-y: auto;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: min(320px, 85%);
-    height: 100vh;
-    background: rgba(11, 14, 20, 0.98);
-    backdrop-filter: blur(10px);
+    overscroll-behavior: contain;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 12px 14px 24px;
-    gap: 16px;
-    transition: left 0.4s ease;
-    z-index: 9999;
-    box-shadow: 5px 0 30px rgba(0,0,0,0.5);
-    min-width: 0;
+    align-items: stretch;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid var(--menu-edge);
+    border-radius: 22px;
+    background: var(--bg-secondary);
+    box-shadow: inset 0 1px rgb(255 255 255 / 12%), 0 16px 36px -14px var(--menu-shadow);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity 180ms ease, transform 220ms ease;
+  }
+
+  .light-theme .main-nav {
+    --menu-glass: linear-gradient(155deg, rgb(255 255 255 / 88%), rgb(240 238 255 / 75%));
+    --menu-edge: rgb(87 72 156 / 24%);
+    --menu-row: rgb(97 77 193 / 12%);
+    --menu-control: rgb(255 255 255 / 54%);
+    --menu-shadow: rgb(48 37 94 / 22%);
+  }
+
+  @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .main-header {
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
+    .main-header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      pointer-events: none;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+    .main-nav {
+      background: var(--menu-glass);
+      -webkit-backdrop-filter: blur(18px) saturate(135%);
+      backdrop-filter: blur(18px) saturate(135%);
+    }
   }
 
   .main-nav.show {
     visibility: visible;
-    left: 0;
+    opacity: 1;
+    transform: none;
   }
-
-  .light-theme .main-nav { background: var(--bg-secondary); }
 
   .menu-close {
     display: inline-flex;
@@ -385,43 +418,53 @@ section:hover .section-header h2::after {
     flex: 0 0 auto;
     gap: 7px;
     min-height: 44px;
-    padding: 6px 14px;
-    border: 1px solid var(--text-muted);
+    padding: 6px 13px;
+    border: 1px solid var(--menu-edge);
     border-radius: 999px;
-    background: var(--bg-primary);
+    background: var(--menu-control);
     color: var(--text-primary);
     font: inherit;
+    font-size: 0.875rem;
     font-weight: 600;
     cursor: pointer;
   }
   .menu-close span { font-size: 1.25em; line-height: 1; }
-  .menu-close:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-  }
 
   .nav-list {
     flex-direction: column;
-    margin-block: auto;
-    gap: 24px;
-    text-align: center;
+    gap: 4px;
   }
 
-  .nav-list a {
-    font-size: 20px;
-    color: white;
-    padding: 14px 24px;
+  .main-nav .nav-list a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 9px 14px;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+  .main-nav .nav-list a.active { background: var(--menu-row); }
+  .main-nav .nav-list a.active::after { content: none; }
+  .light-theme .main-nav .nav-list a.active { color: #5143bf !important; }
+
+  .menu-close:focus-visible,
+  .main-nav .nav-list a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
   }
 
-  .hire-btn {
-    display: none;
-  }
-
-  body.menu-open {
-    overflow: hidden;
-  }
+  .hire-btn { display: none; }
+  body.menu-open { overflow: hidden; }
 }
 
+@media (max-width: 480px) {
+  .main-header { padding-inline: 12px; gap: 8px; }
+  .header-actions { gap: 8px; }
+}
+
+@media (max-width: 900px) and (prefers-reduced-motion: reduce) {
+  .main-nav { transition: none; }
+}
 
 /* ---------- HERO SECTION ---------- */
 .hero-section {
