@@ -65,39 +65,42 @@
     document.querySelectorAll('section[id]').forEach(section => sectionObserver.observe(section));
   };
 
-  // ---------- SIDEBAR MENU ----------
-  const initSidebar = () => {
+  // ---------- MOBILE MENU ----------
+  const initMobileMenu = () => {
     const menuToggle = document.querySelector('.menu-toggle');
-    const sidebar = document.getElementById('site-sidebar');
+    const navMenu = document.getElementById('main-nav');
+    const mobileLayout = window.matchMedia('(max-width: 900px)');
 
-    menuToggle.addEventListener('click', () => {
-      sidebar.showModal();
-      menuToggle.setAttribute('aria-expanded', 'true');
-    });
-    sidebar.addEventListener('close', () => {
-      menuToggle.setAttribute('aria-expanded', 'false');
-    });
+    const setMenu = (isOpen) => {
+      navMenu.classList.toggle('show', isOpen);
+      document.body.classList.toggle('menu-open', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    };
 
-    sidebar.querySelectorAll('.nav-list a').forEach(link => {
+    menuToggle.addEventListener('click', () => setMenu(!navMenu.classList.contains('show')));
+    navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        sidebar.close();
+        if (!navMenu.classList.contains('show')) return;
+        setMenu(false);
         document.getElementById(link.hash.slice(1))?.focus({ preventScroll: true });
       });
     });
 
-    sidebar.addEventListener('click', event => {
-      if (event.target !== sidebar) return;
-      const bounds = sidebar.getBoundingClientRect();
-      if (event.clientX < bounds.left || event.clientX >= bounds.right ||
-          event.clientY < bounds.top || event.clientY >= bounds.bottom) {
-        sidebar.close();
+    document.addEventListener('click', event => {
+      if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) setMenu(false);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && navMenu.classList.contains('show')) {
+        setMenu(false);
+        menuToggle.focus();
       }
     });
+    mobileLayout.addEventListener('change', () => setMenu(false));
   };
 
   // ---------- MAGNETIC BUTTONS ----------
   const initMagneticButtons = () => {
-    const magnets = document.querySelectorAll('.primary-btn, .secondary-btn');
+    const magnets = document.querySelectorAll('.primary-btn, .secondary-btn, .hire-btn');
     magnets.forEach(btn => {
       btn.addEventListener('mousemove', function(e) {
         const rect = this.getBoundingClientRect();
@@ -293,22 +296,11 @@
   };
 
 
-  // ---------- SCROLL PROGRESS ----------
-  const initScrollProgress = () => {
-    const progressBar = document.querySelector('.scroll-progress');
-    if (!progressBar) return;
-    window.addEventListener('scroll', throttle(() => {
-      const winScroll = document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      progressBar.style.width = (winScroll / height) * 100 + '%';
-    }, 10));
-  };
-
   // ---------- MASTER INIT ----------
   const init = () => {
     initTheme();
     initScrollObservers();
-    initSidebar();
+    initMobileMenu();
     initMagneticButtons();
     initCardLight();
     initRipple();
@@ -318,7 +310,6 @@
     initContact();
     initBackToTop();
     initGSAP();
-    initScrollProgress();
   };
 
   if (document.readyState === 'loading') {

@@ -7,7 +7,7 @@
 
   <meta name="description" content="Azad Dhama's frontend portfolio featuring responsive web projects, source code and a downloadable CV.">
   <title>Azad Dhama | Frontend Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=05a01f63766f">
+  <link rel="stylesheet" href="style.css?v=dca6515cc044">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
@@ -19,18 +19,14 @@
 
   <!-- ============ GLOBAL ELEMENTS ============ -->
   <div class="cursor"></div>
-  <div class="scroll-progress"></div>
 
-  <button type="button" class="menu-toggle no-ripple" aria-controls="site-sidebar" aria-expanded="false" aria-haspopup="dialog">Menu</button>
-
-  <dialog class="site-sidebar" id="site-sidebar" aria-labelledby="sidebar-title">
-    <div class="sidebar-heading">
-      <strong class="brand" id="sidebar-title">Azad Dhama</strong>
-      <form method="dialog">
-        <button type="submit" class="sidebar-close no-ripple" aria-label="Close menu" autofocus>×</button>
-      </form>
+  <!-- ============ HEADER ============ -->
+  <header class="main-header">
+    <div class="logo-area">
+      <strong class="brand">Azad Dhama</strong>
     </div>
-    <nav aria-label="Main navigation">
+
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
       <ul class="nav-list">
         <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -39,8 +35,13 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <button type="button" class="theme-toggle no-ripple">Dark / Light</button>
-  </dialog>
+
+    <div class="header-actions">
+      <button class="theme-toggle">Dark / Light</button>
+      <a class="hire-btn" href="#contact">Hire Me</a>
+      <button type="button" class="menu-toggle" aria-label="Menu" aria-controls="main-nav" aria-expanded="false">☰</button>
+    </div>
+  </header>
 
   <!-- ============ HERO SECTION ============ -->
   <section id="home" tabindex="-1" class="hero-section">
@@ -319,6 +320,6 @@
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <!-- other scripts -->
-<script defer src="logic.js?v=749b126eae1b"></script>
+<script defer src="logic.js?v=2bf729eb50ba"></script>
 </body>
 </html>
