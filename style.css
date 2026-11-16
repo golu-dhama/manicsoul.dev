@@ -1932,6 +1932,32 @@ body { padding-top: 120px !important; }
   transform: translateY(2px) rotate(225deg);
 }
 .projects-disclosure .projects-grid { width: 100%; }
+.project-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+.project-card-actions .project-link {
+  min-height: 44px;
+  padding: 8px 15px;
+  border: 1px solid transparent;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  box-shadow: none;
+}
+.project-card-actions .project-link-demo {
+  background: #5146c6;
+}
+.project-card-actions .project-link-code {
+  border-color: var(--text-muted);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+.project-card-actions .project-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 .contact-action:focus-visible,
 .projects-disclosure summary:focus-visible {
   outline: 2px solid var(--accent);

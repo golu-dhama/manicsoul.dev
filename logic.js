@@ -213,7 +213,7 @@
     const projects = [...document.querySelectorAll('#project-results .project-card')].map(card => ({
       card,
       title: card.querySelector('h3').textContent.toLowerCase(),
-      repository: new URL(card.querySelector('a').href).pathname.split('/').pop().toLowerCase()
+      repository: new URL(card.querySelector('.project-link-code').href).pathname.split('/').pop().toLowerCase()
     }));
 
     const filterProjects = () => {
