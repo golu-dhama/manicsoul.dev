@@ -232,27 +232,22 @@
   };
 
   // ---------- CONTACT ----------
-  const initContact = () => {
-    const form = document.querySelector('.contact-form');
-    const recipient = document.querySelector('.contact-email a').href;
-    const name = form.elements.namedItem('name');
-    const message = form.elements.namedItem('message');
+  const initEmailCopy = () => {
+    const copy = document.querySelector('.contact-copy');
+    const status = document.getElementById('contact-status');
+    const address = document.querySelector('.contact-address').textContent.trim();
+    if (!navigator.clipboard?.writeText) return;
 
-    [name, message].forEach(field => {
-      field.addEventListener('input', () => field.setCustomValidity(''));
+    copy.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(address);
+        status.textContent = 'Email address copied.';
+      } catch {
+        status.textContent = 'Select and copy the email address above.';
+      }
     });
-    form.addEventListener('submit', event => {
-      event.preventDefault();
-      name.setCustomValidity(name.value.trim() ? '' : 'Enter your name.');
-      message.setCustomValidity(message.value.trim() ? '' : 'Enter a message.');
-      if (!form.reportValidity()) return;
 
-      const email = form.elements.namedItem('email').value;
-      const subject = encodeURIComponent(`Portfolio inquiry from ${name.value.trim()}`);
-      const body = encodeURIComponent(`${message.value.trim()}\r\n\r\nFrom: ${name.value.trim()} <${email}>`);
-      window.location.href = `${recipient}?subject=${subject}&body=${body}`;
-    });
-    form.hidden = false;
+    copy.hidden = false;
   };
 
   // ---------- BACK TO TOP ----------
@@ -307,7 +302,7 @@
     initTypingEffect();
     initSmoothScramble();
     initProjectSearch();
-    initContact();
+    initEmailCopy();
     initBackToTop();
     initGSAP();
   };
