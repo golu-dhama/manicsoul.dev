@@ -209,6 +209,7 @@
   const initProjectSearch = () => {
     const search = document.getElementById('project-search');
     const count = document.getElementById('project-count');
+    const clear = document.querySelector('.projects-search-clear');
     const projects = [...document.querySelectorAll('#project-results .project-card')].map(card => ({
       card,
       title: card.querySelector('h3').textContent.toLowerCase(),
@@ -217,6 +218,7 @@
 
     const filterProjects = () => {
       const query = search.value.trim().toLowerCase();
+      clear.hidden = search.value === '';
       let matches = 0;
       projects.forEach(({ card, title, repository }) => {
         card.hidden = !title.includes(query) && !repository.includes(query);
@@ -228,6 +230,11 @@
 
     search.closest('.projects-search').hidden = false;
     search.addEventListener('input', filterProjects);
+    clear.addEventListener('click', () => {
+      search.value = '';
+      search.focus();
+      filterProjects();
+    });
     filterProjects();
   };
 
