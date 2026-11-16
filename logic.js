@@ -171,40 +171,6 @@
     setTimeout(typeNext, 400);
   };
 
-  // ---------- SMOOTH TEXT SCRAMBLE ----------
-  const initSmoothScramble = () => {
-    const element = document.querySelector('.gradient');
-    if (!element) return;
-    const originalText = element.innerText;
-    const chars = '!<>-_\\/[]{}—=+*^?#__ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let frame, iteration = 0;
-    let isHovering = false;
-    const scramble = () => {
-      if (!isHovering) return;
-      element.innerText = originalText.split('').map((char, index) => index < iteration ? originalText[index] : chars[Math.floor(Math.random() * chars.length)]).join('');
-      iteration += 0.25;
-      if (iteration < originalText.length) {
-        frame = requestAnimationFrame(scramble);
-      } else {
-        element.innerText = originalText;
-        iteration = 0;
-        isHovering = false;
-      }
-    };
-    element.addEventListener('mouseenter', () => {
-      if (isHovering) return;
-      isHovering = true;
-      iteration = 0;
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(scramble);
-    });
-    element.addEventListener('mouseleave', () => {
-      isHovering = false;
-      cancelAnimationFrame(frame);
-      element.innerText = originalText;
-    });
-  };
-
   // ---------- PROJECT SEARCH ----------
   const initProjectSearch = () => {
     const search = document.getElementById('project-search');
@@ -282,7 +248,6 @@
     initCardLight();
     initRipple();
     initTypingEffect();
-    initSmoothScramble();
     initProjectSearch();
     initEmailCopy();
     initGSAP();

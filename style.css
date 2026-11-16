@@ -433,10 +433,20 @@ section:hover .section-header h2::after {
   text-shadow: 0 0 30px rgba(108,99,255,0.2);
 }
 .hero-text .gradient {
+  display: inline-block;
   background: var(--gradient-main);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-text .gradient {
+    animation: hero-name-reveal 1s cubic-bezier(0.25, 0.55, 0.35, 1) both;
+  }
+}
+@keyframes hero-name-reveal {
+  from { opacity: 0.82; transform: translateY(9px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 .hero-text h2 {
   margin-bottom: clamp(16px, 2vw, 20px) !important;
@@ -454,7 +464,6 @@ section:hover .section-header h2::after {
   margin-right: auto;
 }
 .hero-buttons {
-  animation: floatY 4s ease-in-out infinite;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -1385,11 +1394,6 @@ img[data-src] { filter: blur(10px); transition: filter 0.4s ease; }
 img.loaded { filter: blur(0); }
 
 /* ---------- ANIMATIONS ---------- */
-@keyframes floatY {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); }
-}
 @keyframes shine {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
@@ -1598,7 +1602,7 @@ img.loaded { filter: blur(0); }
 }
 .light-theme .hero-text h1 { color: var(--text-primary); }
 .light-theme .hero-text .gradient {
-  background: linear-gradient(135deg, #6C63FF, #9D96FF);
+  background: linear-gradient(135deg, #5143bf, #7258d9);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
