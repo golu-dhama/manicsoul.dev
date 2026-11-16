@@ -69,6 +69,7 @@
   const initMobileMenu = () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.getElementById('main-nav');
+    const menuClose = navMenu.querySelector('.menu-close');
     const mobileLayout = window.matchMedia('(max-width: 900px)');
 
     const setMenu = (isOpen) => {
@@ -77,7 +78,20 @@
       menuToggle.setAttribute('aria-expanded', String(isOpen));
     };
 
-    menuToggle.addEventListener('click', () => setMenu(!navMenu.classList.contains('show')));
+    const closeMenu = () => {
+      setMenu(false);
+      menuToggle.focus({ preventScroll: true });
+    };
+
+    menuToggle.addEventListener('click', () => {
+      if (navMenu.classList.contains('show')) {
+        closeMenu();
+      } else {
+        setMenu(true);
+        menuClose.focus({ preventScroll: true });
+      }
+    });
+    menuClose.addEventListener('click', closeMenu);
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         if (!navMenu.classList.contains('show')) return;
@@ -87,12 +101,13 @@
     });
 
     document.addEventListener('click', event => {
-      if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) setMenu(false);
+      if (!navMenu.classList.contains('show') || navMenu.contains(event.target) || menuToggle.contains(event.target)) return;
+      if (navMenu.contains(document.activeElement)) closeMenu();
+      else setMenu(false);
     });
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape' && navMenu.classList.contains('show')) {
-        setMenu(false);
-        menuToggle.focus();
+        closeMenu();
       }
     });
     mobileLayout.addEventListener('change', () => setMenu(false));

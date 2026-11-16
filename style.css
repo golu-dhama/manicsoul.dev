@@ -340,6 +340,8 @@ section:hover .section-header h2::after {
   padding: 0 8px;
   line-height: 1;
 }
+.menu-close { display: none; }
+
 /* TABLET + MOBILE */
 @media (max-width: 900px) {
 
@@ -359,8 +361,9 @@ section:hover .section-header h2::after {
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding: 12px 14px 24px;
+    gap: 16px;
     transition: left 0.4s ease;
     z-index: 9999;
     box-shadow: 5px 0 30px rgba(0,0,0,0.5);
@@ -374,8 +377,32 @@ section:hover .section-header h2::after {
 
   .light-theme .main-nav { background: var(--bg-secondary); }
 
+  .menu-close {
+    display: inline-flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    gap: 7px;
+    min-height: 44px;
+    padding: 6px 14px;
+    border: 1px solid var(--text-muted);
+    border-radius: 999px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .menu-close span { font-size: 1.25em; line-height: 1; }
+  .menu-close:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
   .nav-list {
     flex-direction: column;
+    margin-block: auto;
     gap: 24px;
     text-align: center;
   }
