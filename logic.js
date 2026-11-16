@@ -222,22 +222,6 @@
     copy.hidden = false;
   };
 
-  // ---------- GSAP ANIMATIONS ----------
-  const initGSAP = () => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
-      console.warn('GSAP or ScrollTrigger not loaded – GSAP animations disabled');
-      return;
-    }
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from('.skill-category', {
-      scrollTrigger: { trigger: '.skills-container', start: 'top 80%' },
-      scale: 0.9, opacity: 0, duration: 0.6, stagger: 0.1
-    });
-  };
-
-
   // ---------- MASTER INIT ----------
   const init = () => {
     initTheme();
@@ -248,7 +232,6 @@
     initProjectDisclosure();
     initProjectSearch();
     initEmailCopy();
-    initGSAP();
   };
 
   if (document.readyState === 'loading') {
