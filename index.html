@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>manicsoul⭐portfolio</title>
+  <title>Azad Dhama | ManicSoul Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -18,7 +18,6 @@
 
   <!-- ============ GLOBAL ELEMENTS ============ -->
   <div class="cursor"></div>
-  <div class="page-loader"></div>
   <div class="scroll-progress"></div>
 
   <!-- ============ HEADER ============ -->
@@ -32,27 +31,26 @@
 </a>
     </div>
 
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
       <ul class="nav-list">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
     <div class="header-actions">
       <button class="theme-toggle">Dark / Light</button>
-      <button class="hire-btn" id="hireBtn">Hire Me</button>
-      <button class="menu-toggle" aria-label="Menu">☰</button>
+      <a class="hire-btn" href="#contact">Hire Me</a>
+      <button type="button" class="menu-toggle" aria-label="Menu" aria-controls="main-nav" aria-expanded="false">☰</button>
     </div>
   </header>
 
   <!-- ============ HERO SECTION ============ -->
-  <section id="home" class="hero-section">
+  <section id="home" tabindex="-1" class="hero-section">
 
     <div class="hero-bg"></div>
 
@@ -74,20 +72,20 @@
 <div class="noise-layer"></div>
 <div class="dev-grid"></div>
         <div class="hero-buttons">
-          <button class="primary-btn">View Work</button>
-          <button class="secondary-btn">Download CV</button>
+          <a class="primary-btn" href="#projects">View Work</a>
+          <a class="secondary-btn" href="mailto:aajaddhama44@gmail.com?subject=CV%20request">Request CV</a>
         </div>
       </div>
 
       <div class="hero-image">
-        <img src="images/profile_dp.png" alt="Developer Image Placeholder" />
+        <img src="images/profile_dp.png" alt="Azad Dhama" />
       </div>
 
     </div>
   </section>
 
   <!-- ABOUT SECTION  -->
-<section id="about" class="about-premium">
+<section id="about" tabindex="-1" class="about-premium">
 
   <div class="section-header">
     <h2>About Me</h2>
@@ -145,7 +143,7 @@
 </section>
 
   <!-- ============ SKILLS SECTION – PREMIUM ============ -->
-  <section id="skills" class="skills-section">
+  <section id="skills" tabindex="-1" class="skills-section">
 
     <div class="section-header">
       <h2>Tech Stack</h2>
@@ -189,7 +187,7 @@
   </section>
 
   <!-- ============ EXPERIENCE TIMELINE ============ -->
-  <section id="experience" class="experience-section">
+  <section id="experience" tabindex="-1" class="experience-section">
 
     <div class="section-header">
       <h2>Experience</h2>
@@ -214,85 +212,163 @@
   </section>
 
   <!-- ============ PROJECTS SECTION ============ -->
-  <section id="projects" class="projects-section">
-
+  <section id="projects" tabindex="-1" class="projects-section">
     <div class="section-header">
       <h2>Projects</h2>
-      <p>Some of my best work</p>
+      <p>Public repositories on GitHub</p>
     </div>
 
-    <div class="projects-filter">
-      <button>All</button>
-      <button>Web</button>
-      <button>UI</button>
-      <button>JavaScript</button>
+    <div class="projects-search" hidden>
+      <label for="project-search">Search projects</label>
+      <input type="search" id="project-search" placeholder="Search by project name" aria-controls="project-results">
+      <p id="project-count" role="status"></p>
     </div>
 
-    <div class="projects-grid">
-
-      <div class="project-card glass  hover-layer glass-rim" data-category="web">
-  <h3 class="shiny-text">Project</h3>
-  <button class="magnetic active-glow">View</button>
-</div>
-
-      <div class="project-card" data-category="web">
-        <h3>Neural Dimension Engine</h3>
-        <p>AI visualization project</p>
-        <button>View</button>
-      </div>
-
-      <div class="project-card" data-category="web">
-        <h3>Portfolio X</h3>
-        <p>Premium portfolio website</p>
-        <button>View</button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============ BLOG SECTION ============ -->
-  <section id="blog" class="blog-section">
-
-    <div class="section-header">
-      <h2>Dev Blog</h2>
-      <p>Articles & tutorials</p>
-    </div>
-
-    <div class="blog-grid">
-
-      <article class="blog-card">
-        <h3>JavaScript Deep Dive</h3>
-        <p>Understanding core JS concepts</p>
+    <div class="projects-grid" id="project-results">
+      <article class="project-card">
+        <h3>Responsive Sidebar Menu Card</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/responsive-sidebar-menu-card" aria-label="View responsive-sidebar-menu-card on GitHub">GitHub Code</a>
       </article>
-
-      <article class="blog-card">
-        <h3>GSAP Animations Guide</h3>
-        <p>Master modern animations</p>
+      <article class="project-card">
+        <h3>Ping Single Column Coming Soon Page</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/ping-single-column-coming-soon-page" aria-label="View ping-single-column-coming-soon-page on GitHub">GitHub Code</a>
       </article>
-
-      <article class="blog-card">
-        <h3>React Performance Tips</h3>
-        <p>Optimize large apps</p>
+      <article class="project-card">
+        <h3>Simple Card</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/simple-card" aria-label="View simple-card on GitHub">GitHub Code</a>
       </article>
-
+      <article class="project-card">
+        <h3>Result Summary Component</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/result-summary-component" aria-label="View result-summary-component on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Intro Component with Signup Form</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/intro-component-with-signup-form-master" aria-label="View intro-component-with-signup-form-master on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Fruitful Product Card</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/fruitful-product-card" aria-label="View fruitful-product-card on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>DevFolio X</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/devfolio-x" aria-label="View devfolio-x on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>MyProject</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/MyProject" aria-label="View MyProject on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>3 Column Preview Card</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/3-column-preview-card" aria-label="View 3-column-preview-card on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Interactive Rating Component</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/Interactive-rating-component" aria-label="View Interactive-rating-component on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Huddle Landing Page</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/huddle-landing-page" aria-label="View huddle-landing-page on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Meditation Session UI Card</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/meditation-session-ui-card" aria-label="View meditation-session-ui-card on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Article Preview Component</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/article-preview-component" aria-label="View article-preview-component on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Cosmic Scroll 3D</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/cosmic-scroll-3d" aria-label="View cosmic-scroll-3d on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>3D Portfolio Carousel</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/3d-portfolio-carousel" aria-label="View 3d-portfolio-carousel on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Blog Preview Card</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/blog-preview-card" aria-label="View blog-preview-card on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Base Apparel Coming Soon</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/base-apparel-coming-soon" aria-label="View base-apparel-coming-soon on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Scroll Core</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/scroll-core" aria-label="View scroll-core on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>DepthCard</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/DepthCard" aria-label="View DepthCard on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Social Proof Section</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/social-proof-section" aria-label="View social-proof-section on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Stats Preview Card</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/stats-preview-card" aria-label="View stats-preview-card on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Single Price Grid Component</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/single-price-grid-component" aria-label="View single-price-grid-component on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Product Preview Card</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/product-preview-card" aria-label="View product-preview-card on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Faq Accordion Card</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/faq-accordion-card" aria-label="View faq-accordion-card on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>ManicSoul Portfolio</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/manicsoul.dev" aria-label="View manicsoul.dev on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Equality Vs Equity</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/equality-vs-equity" aria-label="View equality-vs-equity on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Profile Card Component</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/profile-card-component" aria-label="View profile-card-component on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Order Summary Component</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/order-summary-component" aria-label="View order-summary-component on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>NFT Preview Card</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/nft-preview-card-" aria-label="View nft-preview-card- on GitHub">GitHub Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Social Links Profile Card</h3>
+        <a class="project-link" href="https://github.com/golu-dhama/social-links-profile-card" aria-label="View social-links-profile-card on GitHub">GitHub Code</a>
+      </article>
     </div>
   </section>
 
   <!-- ============ CONTACT SECTION ============ -->
-  <section id="contact" class="contact-section">
+  <section id="contact" tabindex="-1" class="contact-section">
 
     <div class="section-header">
       <h2>Contact Me</h2>
       <p>Let's build something amazing</p>
     </div>
 
-    <form class="contact-form">
+    <p class="contact-email"><a href="mailto:aajaddhama44@gmail.com">aajaddhama44@gmail.com</a></p>
+    <form class="contact-form" hidden>
 
-      <input type="text" placeholder="Your Name" />
-      <input type="email" placeholder="Your Email" />
-      <textarea placeholder="Your Message"></textarea>
-
-      <button type="submit">Send Message</button>
+      <div class="form-group">
+        <input type="text" name="name" aria-label="Your name" placeholder="Your Name" autocomplete="name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" aria-label="Your email" placeholder="Your Email" autocomplete="email" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" aria-label="Your message" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit">Open Email Draft</button>
 
     </form>
 
@@ -310,8 +386,7 @@
 
       <div class="footer-links">
         <a href="https://github.com/golu-dhama">GitHub</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Twitter</a>
+        <a href="https://instagram.com/manicsoul1999">Instagram</a>
       </div>
 
     </div>
@@ -319,14 +394,12 @@
     <p class="copyright">
   <span>©</span> 2026 manicsoul-dev – All Rights Reserved
 </p>
-    <div id="tsparticles"></div>
 
   </footer>
   <!-- GSAP first, once -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <!-- other scripts -->
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
-<script src="logic.js"></script>
+<script defer src="logic.js"></script>
 </body>
 </html>
