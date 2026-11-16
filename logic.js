@@ -113,33 +113,9 @@
     mobileLayout.addEventListener('change', () => setMenu(false));
   };
 
-  // ---------- MAGNETIC BUTTONS ----------
-  const initMagneticButtons = () => {
-    const magnets = document.querySelectorAll('.primary-btn, .secondary-btn, .hire-btn');
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-    magnets.forEach(button => {
-      const reset = () => { button.style.removeProperty('transform'); };
-
-      button.addEventListener('pointermove', event => {
-        if (event.pointerType !== 'mouse' || reducedMotion.matches) return;
-        const rect = button.getBoundingClientRect();
-        const x = event.clientX - rect.left - rect.width / 2;
-        const y = event.clientY - rect.top - rect.height / 2;
-        button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
-      });
-      button.addEventListener('pointerdown', event => {
-        if (event.pointerType !== 'mouse') reset();
-      });
-      button.addEventListener('pointerleave', reset);
-      button.addEventListener('pointercancel', reset);
-      reducedMotion.addEventListener('change', reset);
-    });
-  };
-
   // ---------- CARD LIGHT FOLLOW ----------
   const initCardLight = () => {
-  const cards = document.querySelectorAll('.project-card, .blog-card');
+  const cards = document.querySelectorAll('.blog-card');
 
   cards.forEach(card => {
     const handleMouseMove = throttle((e) => {
@@ -157,23 +133,6 @@
   });
 };
 
-
-  // ---------- BUTTON RIPPLE ----------
-  const initRipple = () => {
-    document.querySelectorAll('button:not(.no-ripple)').forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        const ripple = document.createElement('span');
-        ripple.classList.add('ripple');
-        const rect = this.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        ripple.style.width = ripple.style.height = size + 'px';
-        ripple.style.left = e.clientX - rect.left - size / 2 + 'px';
-        ripple.style.top = e.clientY - rect.top - size / 2 + 'px';
-        this.appendChild(ripple);
-        setTimeout(() => ripple.remove(), 600);
-      });
-    });
-  };
 
   // ---------- TYPING EFFECT ----------
   const initTypingEffect = () => {
@@ -284,9 +243,7 @@
     initTheme();
     initScrollObservers();
     initMobileMenu();
-    initMagneticButtons();
     initCardLight();
-    initRipple();
     initTypingEffect();
     initProjectDisclosure();
     initProjectSearch();
