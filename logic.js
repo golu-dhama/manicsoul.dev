@@ -257,25 +257,6 @@
     copy.hidden = false;
   };
 
-  // ---------- BACK TO TOP ----------
-  const initBackToTop = () => {
-    let btn = document.querySelector('.back-to-top');
-    if (!btn) {
-      btn = document.createElement('button');
-      btn.className = 'back-to-top';
-      btn.innerHTML = '↑';
-      btn.setAttribute('aria-label', 'Back to top');
-      document.body.appendChild(btn);
-    }
-    window.addEventListener('scroll', throttle(() => {
-      btn.classList.toggle('visible', window.scrollY > 500);
-    }, 100));
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  };
-
   // ---------- GSAP ANIMATIONS ----------
   const initGSAP = () => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -310,7 +291,6 @@
     initSmoothScramble();
     initProjectSearch();
     initEmailCopy();
-    initBackToTop();
     initGSAP();
   };
 
