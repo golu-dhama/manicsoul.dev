@@ -266,12 +266,6 @@
     }
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to('.hero-image', {
-      y: 50,
-      ease: 'none',
-      scrollTrigger: { trigger: '.hero-section', start: 'top top', end: 'bottom top', scrub: true }
-    });
-
     gsap.from('.skill-category', {
       scrollTrigger: { trigger: '.skills-container', start: 'top 80%' },
       scale: 0.9, opacity: 0, duration: 0.6, stagger: 0.1
