@@ -1,613 +1,146 @@
-%PDF-1.3
-%âãÏÓ
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/PageMode /UseNone
-/Pages 2 0 R
-/Type /Catalog
+/F1 2 0 R /F2 3 0 R
 >>
 endobj
 2 0 obj
 <<
-/Count 1
-/Kids [ 3 0 R ]
-/Type /Pages
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
 >>
 endobj
 3 0 obj
 <<
-/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R ]
-/Contents 13 0 R
-/MediaBox [ 0 0 595.2756 841.8898 ]
-/Parent 2 0 R
-/Resources <<
-/Font 14 0 R
-/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->>
-/Rotate 0
-/Trans <<
->>
-/Type /Page
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
 >>
 endobj
 4 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (mailto\072aajaddhama44\100gmail\056com)
->>
-/Border [ 0 0 0 ]
-/Rect [ 187.77 721.8898 309.63 733.8898 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (mailto:aajaddhama44@gmail.com)
+>> /Border [ 0 0 0 ] /Rect [ 187.77 721.8898 309.63 733.8898 ] /Subtype /Link /Type /Annot
 >>
 endobj
 5 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (https\072\057\057golu\055dhama\056github\056io\057manicsoul\056dev\057)
->>
-/Border [ 0 0 0 ]
-/Rect [ 54 705.8898 90.68 717.8898 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (https://golu-dhama.github.io/manicsoul.dev/)
+>> /Border [ 0 0 0 ] /Rect [ 54 705.8898 90.68 717.8898 ] /Subtype /Link /Type /Annot
 >>
 endobj
 6 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (https\072\057\057github\056com\057golu\055dhama)
->>
-/Border [ 0 0 0 ]
-/Rect [ 98.84 705.8898 129.96 717.8898 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (https://github.com/golu-dhama)
+>> /Border [ 0 0 0 ] /Rect [ 98.84 705.8898 129.96 717.8898 ] /Subtype /Link /Type /Annot
 >>
 endobj
 7 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (https\072\057\057golu\055dhama\056github\056io\057huddle\055landing\055page\057)
->>
-/Border [ 0 0 0 ]
-/Rect [ 54 418.8898 100.13 430.8898 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (https://golu-dhama.github.io/huddle-landing-page/)
+>> /Border [ 0 0 0 ] /Rect [ 54 366.8898 100.13 378.8898 ] /Subtype /Link /Type /Annot
 >>
 endobj
 8 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (https\072\057\057github\056com\057golu\055dhama\057huddle\055landing\055page)
->>
-/Border [ 0 0 0 ]
-/Rect [ 108.29 418.8898 164.43 430.8898 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (https://github.com/golu-dhama/huddle-landing-page)
+>> /Border [ 0 0 0 ] /Rect [ 108.29 366.8898 164.43 378.8898 ] /Subtype /Link /Type /Annot
 >>
 endobj
 9 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (https\072\057\057golu\055dhama\056github\056io\057responsive\055sidebar\055menu\055card\057\043\057)
->>
-/Border [ 0 0 0 ]
-/Rect [ 54 341.8898 100.13 353.8898 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (https://golu-dhama.github.io/responsive-sidebar-menu-card/#/)
+>> /Border [ 0 0 0 ] /Rect [ 54 289.8898 100.13 301.8898 ] /Subtype /Link /Type /Annot
 >>
 endobj
 10 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (https\072\057\057github\056com\057golu\055dhama\057responsive\055sidebar\055menu\055card)
->>
-/Border [ 0 0 0 ]
-/Rect [ 108.29 341.8898 164.43 353.8898 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (https://github.com/golu-dhama/responsive-sidebar-menu-card)
+>> /Border [ 0 0 0 ] /Rect [ 108.29 289.8898 164.43 301.8898 ] /Subtype /Link /Type /Annot
 >>
 endobj
 11 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (https\072\057\057golu\055dhama\056github\056io\057manicsoul\056dev\057)
->>
-/Border [ 0 0 0 ]
-/Rect [ 54 264.8898 90.68 276.8898 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (https://golu-dhama.github.io/manicsoul.dev/)
+>> /Border [ 0 0 0 ] /Rect [ 54 212.8898 90.68 224.8898 ] /Subtype /Link /Type /Annot
 >>
 endobj
 12 0 obj
 <<
 /A <<
-/S /URI
-/Type /Action
-/URI (https\072\057\057github\056com\057golu\055dhama\057manicsoul\056dev)
->>
-/Border [ 0 0 0 ]
-/Rect [ 98.84 264.8898 154.98 276.8898 ]
-/Subtype /Link
-/Type /Annot
+/S /URI /Type /Action /URI (https://github.com/golu-dhama/manicsoul.dev)
+>> /Border [ 0 0 0 ] /Rect [ 98.84 212.8898 154.98 224.8898 ] /Subtype /Link /Type /Annot
 >>
 endobj
 13 0 obj
 <<
-/Length 4628
->>
-stream
-1 0 0 1 0 0 cm
-BT
-/F1 12 Tf
-14.4 TL
-ET
-q
-1 0 0 1 54 753.8898 cm
-q
-0.101961 0.14902 0.211765 rg
-BT
-1 0 0 1 0 4 Tm
-/F2 30 Tf
-34 TL
-(Azad Dhama) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 733.8898 cm
-q
-0.141176 0.317647 0.517647 rg
-BT
-1 0 0 1 0 6 Tm
-/F2 14 Tf
-20 TL
-(Frontend \057 Website Developer \055 Fresher) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 717.8898 cm
-q
-0.141176 0.317647 0.517647 RG
-n
-133.77 4.75 m
-255.63 4.75 l
-S
-BT
-1 0 0 1 0 6 Tm
-16 TL
-/F1 10 Tf
-0.247059 0.305882 0.384314 rg
-(Meerut\054 Uttar Pradesh\054 India \174 ) Tj
-0.141176 0.317647 0.517647 rg
-(aajaddhama44\100gmail\056com) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 701.8898 cm
-q
-0.141176 0.317647 0.517647 RG
-n
-0 4.75 m
-36.68 4.75 l
-S
-n
-44.84 4.75 m
-75.96 4.75 l
-S
-BT
-1 0 0 1 0 6 Tm
-16 TL
-/F1 10 Tf
-0.141176 0.317647 0.517647 rg
-(Portfolio) Tj
-0.247059 0.305882 0.384314 rg
-( \174 ) Tj
-0.141176 0.317647 0.517647 rg
-(GitHub) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 668.8898 cm
-q
-0.141176 0.317647 0.517647 rg
-BT
-1 0 0 1 0 4 Tm
-/F2 12 Tf
-16 TL
-(Profile) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 611.8898 cm
-q
-0.101961 0.14902 0.211765 rg
-BT
-1 0 0 1 0 40 Tm
-/F1 11 Tf
-17 TL
-(Electronics diploma graduate building responsive websites and interactive UI components with) Tj
-T*
-(HTML\054 CSS and vanilla JavaScript\056 Seeking entry\055level frontend and website development roles in) Tj
-T*
-(Delhi NCR\056) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 578.8898 cm
-q
-0.141176 0.317647 0.517647 rg
-BT
-1 0 0 1 0 4 Tm
-/F2 12 Tf
-16 TL
-(Technical Skills) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 555.8898 cm
-q
-BT
-1 0 0 1 0 6 Tm
-17 TL
-/F2 11 Tf
-0.101961 0.14902 0.211765 rg
-(Web) Tj
-/F1 11 Tf
-(   HTML5\054 CSS3\054 JavaScript\054 Flexbox\054 CSS Grid\054 media queries) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 538.8898 cm
-q
-BT
-1 0 0 1 0 6 Tm
-17 TL
-/F2 11 Tf
-0.101961 0.14902 0.211765 rg
-(Tools) Tj
-/F1 11 Tf
-(   Git\054 GitHub\054 GitHub Pages) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 521.8898 cm
-q
-BT
-1 0 0 1 0 6 Tm
-17 TL
-/F2 11 Tf
-0.101961 0.14902 0.211765 rg
-(Learning) Tj
-/F1 11 Tf
-(   WordPress basics) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 488.8898 cm
-q
-0.141176 0.317647 0.517647 rg
-BT
-1 0 0 1 0 4 Tm
-/F2 12 Tf
-16 TL
-(Selected Projects) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 466.8898 cm
-q
-0.101961 0.14902 0.211765 rg
-BT
-1 0 0 1 0 4.5 Tm
-/F2 11.5 Tf
-16 TL
-(Huddle Landing Page) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 430.8898 cm
-q
-0.101961 0.14902 0.211765 rg
-BT
-1 0 0 1 0 23 Tm
-/F1 11 Tf
-17 TL
-(Built a mobile\055first landing page from a Frontend Mentor design\056 Used responsive CSS layouts and) Tj
-T*
-(styled hover states for the call to action and social links\056) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 414.8898 cm
-q
-0.141176 0.317647 0.517647 RG
-n
-0 4.75 m
-46.13 4.75 l
-S
-n
-54.29 4.75 m
-110.43 4.75 l
-S
-BT
-1 0 0 1 0 6 Tm
-16 TL
-/F1 10 Tf
-0.141176 0.317647 0.517647 rg
-(Live demo) Tj
-0.247059 0.305882 0.384314 rg
-( \174 ) Tj
-0.141176 0.317647 0.517647 rg
-(Source code) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 405.8898 cm
-Q
-q
-1 0 0 1 54 389.8898 cm
-q
-0.101961 0.14902 0.211765 rg
-BT
-1 0 0 1 0 4.5 Tm
-/F2 11.5 Tf
-16 TL
-(Responsive Sidebar Menu Card) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 353.8898 cm
-q
-0.101961 0.14902 0.211765 rg
-BT
-1 0 0 1 0 23 Tm
-/F1 11 Tf
-17 TL
-(Built a collapsible sidebar with vanilla JavaScript\054 tooltips for the collapsed layout and a dark\055mode) Tj
-T*
-(preference saved in local storage\056) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 337.8898 cm
-q
-0.141176 0.317647 0.517647 RG
-n
-0 4.75 m
-46.13 4.75 l
-S
-n
-54.29 4.75 m
-110.43 4.75 l
-S
-BT
-1 0 0 1 0 6 Tm
-16 TL
-/F1 10 Tf
-0.141176 0.317647 0.517647 rg
-(Live demo) Tj
-0.247059 0.305882 0.384314 rg
-( \174 ) Tj
-0.141176 0.317647 0.517647 rg
-(Source code) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 328.8898 cm
-Q
-q
-1 0 0 1 54 312.8898 cm
-q
-0.101961 0.14902 0.211765 rg
-BT
-1 0 0 1 0 4.5 Tm
-/F2 11.5 Tf
-16 TL
-(Azad Dhama Portfolio) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 276.8898 cm
-q
-0.101961 0.14902 0.211765 rg
-BT
-1 0 0 1 0 23 Tm
-/F1 11 Tf
-17 TL
-(Published a personal portfolio on GitHub Pages with a searchable list of public repositories\054) Tj
-T*
-(responsive navigation and a light\057dark theme\056) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 260.8898 cm
-q
-0.141176 0.317647 0.517647 RG
-n
-0 4.75 m
-36.68 4.75 l
-S
-n
-44.84 4.75 m
-100.98 4.75 l
-S
-BT
-1 0 0 1 0 6 Tm
-16 TL
-/F1 10 Tf
-0.141176 0.317647 0.517647 rg
-(Live site) Tj
-0.247059 0.305882 0.384314 rg
-( \174 ) Tj
-0.141176 0.317647 0.517647 rg
-(Source code) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 227.8898 cm
-q
-0.141176 0.317647 0.517647 rg
-BT
-1 0 0 1 0 4 Tm
-/F2 12 Tf
-16 TL
-(Education) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 204.8898 cm
-q
-BT
-1 0 0 1 0 6 Tm
-17 TL
-/F2 11 Tf
-0.101961 0.14902 0.211765 rg
-(Polytechnic Diploma in Electronics) Tj
-/F1 11 Tf
-(   Completed) Tj
-T*
-ET
-Q
-Q
-q
-1 0 0 1 54 187.8898 cm
-q
-BT
-1 0 0 1 0 6 Tm
-17 TL
-/F2 11 Tf
-0.101961 0.14902 0.211765 rg
-(Class 12) Tj
-/F1 11 Tf
-(   Completed) Tj
-T*
-ET
-Q
-Q
+/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R ] /Contents 17 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 16 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
 
-endstream
+>> /Type /Page
+>>
 endobj
 14 0 obj
 <<
-/F1 15 0 R
-/F2 16 0 R
+/PageMode /UseNone /Pages 16 0 R /Type /Catalog
 >>
 endobj
 15 0 obj
 <<
-/BaseFont /Helvetica
-/Encoding /WinAnsiEncoding
-/Name /F1
-/Subtype /Type1
-/Type /Font
+/Author (Azad Dhama) /CreationDate (D:20261117164027+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261117164027+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (Azad Dhama - Frontend Developer CV) /Trapped /False
 >>
 endobj
 16 0 obj
 <<
-/BaseFont /Helvetica-Bold
-/Encoding /WinAnsiEncoding
-/Name /F2
-/Subtype /Type1
-/Type /Font
+/Count 1 /Kids [ 13 0 R ] /Type /Pages
 >>
 endobj
 17 0 obj
 <<
-/Author (Azad Dhama)
-/CreationDate (D\07220261116122737\05305\04700\047)
-/Creator (\050unspecified\051)
-/Keywords ()
-/ModDate (D\07220261116122737\05305\04700\047)
-/Producer (ReportLab PDF Library \055 \050opensource\051)
-/Subject (\050unspecified\051)
-/Title (Azad Dhama \055 Frontend Developer CV)
-/Trapped /False
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1536
 >>
+stream
+Gb"/'>BB'f&:Vs/fLOX_*6WR&e=>=?,TTW&dq<(s>D[/n8LC:_+5`=m%_9+nLZq_BL;6p>\!QR<?%mfe0@G6F-,A+]*1[`c*_b`^![iN_24RAOr\u%dQ!jZ4kW;?k8oP#!E/7.V&HRXi,M*%<,:&:9;#(,57_83]U_;#I^j#2!IWP)<pb/)PBgGDg'27k'qQgA&Nj%Vrrc>lj6@e+VB+T\/[XVX.7N4`.=@CJP&C6WC%')-CK&>6TF2Qq#/X_\.VVi$2("3=b^"/;?"4l76*)o2Mn2Q0<M*i]-$UZ<4gKt"/DcfXVCL`QZ-;':7`,7QO_qd"<0XuQEpuma\@;s,OWm)+CN1gTuMIpPt&?`$l;tq:M&)Ig3$n/fe=_:#C"Ma(FjhaT#g$?.@53fYin_&tn.!]jDJfo#q@.Q2bSPcam5^FCg94d6`E7qhZ'=s6XkCT2HHI`mm-lRMcQ(8E9)J^<4N0ToS_0Y'rpBfB\/KDck1iRF:G:$F,:^B26OR\$d-&!<V<)]%!XQC_e<=UF2Krd+<13dW3U4K%Z3!r4(eCY"M=+IBgAZRX**k<^X4q''A2qLDVR7s&D93Q<Y."%d_3_:&n(^DCH4]ii^X&b"maq3\SIG.D2=NF["QFIKj'PI`T3h0+q$4ahAgcBlB$PR`&fp]4R^t;NFliT;FHZ?sjC@MMGj-JZ\3^`?_p8N04dbm87FT>^GLKj<9[46.iAJJ)ZWDf*@OZ$hi2>";1eh"0>hd=)+iH0*&KZWuS?5).*D[AM>3]tu^CW!GP[C9E+K+F\eGI`"uRrXu6MD83fW\i5Z#3r"Wk$gFV,@Ma/eIaqrBU(A:7.&6E`O7'@kXsD1+5%d3Gj?74TTHJN@aI\Z<p/1f/!Q#_-Hm;@o$KcQ[SS`[;[-Lm\qO:-p'A7T&_0?`cMqEjN$VDM^&h4iB%4]]?@`8^lM$RI$*sdBbs?C+j0r?K"ZWFH?5T6;6RMMRLOE<<R:'un+g@@Qe%E.@qsjZ1neE[Y!=GZn@5Bm5F/9?.]es>OL=kcnidu'(\Nq!(AJ<>[b(2X61#(]H/\Z#WfT^PQd:O\DAK`eKTFJ;oI?*LC>[pnMQ7TJ[bGo!&Q79j`-[>=2cN-9$G+K7sa<CQVKFe?J2qgA?`-$[fAu;/sIVj_#Z#W&R_F2r^[?Sh8T-7G!o#jOP]MIhL5%T2[1H*.]&.)7P#ut-3KeEYBI;h02f^0KDA!I,/2TCa^D[Z\7Umi'Q0=FF(mRE5FoPJ84Z+$Ze_f@9aK*<#_VHAOtcudCrDurA[euV^c.%+DUH:dlr?XEs_No&fs(V0G(ldP53Se(;Y=lt.,d_E]K1%nD'=$92,]_Z>F+_MQ0.f_),HNRq"5WdZY8rYtRHaG(VmPZ3NYcnA/[^SkFiDO[^T,g)(C2l\/4JuIZV0G73Qm57<9DS-cR/3LjBU?=IEF!4Am$4PnK_[9h9&ff/*+q5I2;.3tI.j1n*ug]G=IJk(!N566(tPjlS(Xh[)W1b%>(Y^@e8+-O60sAc4:tP.N7/96^qi7nkD31~>endstream
 endobj
 xref
 0 18
 0000000000 65535 f 
-0000000015 00000 n 
-0000000083 00000 n 
-0000000142 00000 n 
-0000000412 00000 n 
-0000000598 00000 n 
-0000000811 00000 n 
-0000001005 00000 n 
-0000001228 00000 n 
-0000001452 00000 n 
-0000001695 00000 n 
-0000001932 00000 n 
-0000002146 00000 n 
-0000002361 00000 n 
-0000007042 00000 n 
-0000007086 00000 n 
-0000007194 00000 n 
-0000007307 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000498 00000 n 
+0000000684 00000 n 
+0000000860 00000 n 
+0000001053 00000 n 
+0000001250 00000 n 
+0000001454 00000 n 
+0000001661 00000 n 
+0000001848 00000 n 
+0000002039 00000 n 
+0000002314 00000 n 
+0000002384 00000 n 
+0000002683 00000 n 
+0000002744 00000 n 
 trailer
 <<
+/ID 
+[<85df66ef463e57cff1235d48d3239326><85df66ef463e57cff1235d48d3239326>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 15 0 R
+/Root 14 0 R
 /Size 18
-/Root 1 0 R
-/Info 17 0 R
-/ID [ <89f699b0e48b9ac237e1e9c9132047b1> <89f699b0e48b9ac237e1e9c9132047b1> ]
 >>
 startxref
-7645
+4372
 %%EOF
