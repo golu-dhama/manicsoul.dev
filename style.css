@@ -1656,6 +1656,110 @@ body { padding-top: 120px !important; }
   font-size: 0.875rem;
   letter-spacing: 0;
 }
+/* AI-assisted development */
+.ai-workflow {
+  --workflow-surface: #181827;
+  --workflow-edge: #484062;
+  --workflow-tile: #222135;
+  --workflow-accent: #c4b6ff;
+  --workflow-shine: rgb(123 98 222 / 18%);
+  width: min(90%, 980px);
+  margin: clamp(24px, 4vw, 40px) auto 0;
+  padding: clamp(18px, 4vw, 36px);
+  border: 1px solid var(--workflow-edge);
+  border-radius: var(--radius);
+  background: radial-gradient(ellipse at top right, var(--workflow-shine), transparent 62%), var(--workflow-surface);
+  color: var(--text-primary);
+}
+.light-theme .ai-workflow {
+  --workflow-surface: #fff;
+  --workflow-edge: #d7cfee;
+  --workflow-tile: #f5f2fb;
+  --workflow-accent: #5143a8;
+  --workflow-shine: rgb(125 96 219 / 11%);
+}
+.ai-workflow-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 12px 16px;
+}
+.ai-workflow-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--workflow-edge);
+  border-radius: 13px;
+  background: var(--workflow-tile);
+  color: var(--workflow-accent);
+  font: 700 0.85rem/1 ui-monospace, monospace;
+}
+.ai-workflow h3 {
+  font-size: clamp(1.3rem, 1.05rem + 1vw, 1.9rem);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.ai-workflow p {
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+.ai-workflow .ai-workflow-duration {
+  grid-column: 2;
+  justify-self: start;
+  padding: 4px 10px;
+  border: 1px solid var(--workflow-edge);
+  border-radius: 999px;
+  background: var(--workflow-tile);
+  color: var(--workflow-accent);
+  font-size: 0.8125rem;
+  font-weight: 650;
+}
+.ai-workflow-steps {
+  display: grid;
+  gap: 10px;
+  margin-block: 22px;
+}
+.ai-workflow-step {
+  padding: 15px;
+  border: 1px solid var(--workflow-edge);
+  border-radius: 13px;
+  background: var(--workflow-tile);
+}
+.ai-workflow h4 {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.ai-workflow-step p,
+.ai-workflow-example p {
+  font-size: 0.9375rem;
+}
+.ai-workflow-example {
+  padding-inline-start: 14px;
+  border-inline-start: 2px solid var(--workflow-accent);
+}
+.ai-workflow-example a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  color: var(--workflow-accent);
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.ai-workflow-example a:focus-visible {
+  outline: 2px solid var(--workflow-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+@media (min-width: 720px) {
+  .ai-workflow-header { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .ai-workflow .ai-workflow-duration { grid-column: auto; }
+  .ai-workflow-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
 .profile-summary {
   width: min(90%, 740px);
   margin: 0 auto;
