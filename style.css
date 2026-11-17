@@ -1850,6 +1850,29 @@ body { padding-top: 120px !important; }
   .theme-toggle { padding-inline: 9px; }
 }
 .projects-disclosure summary.action-control { border-inline-start: 4px solid var(--accent); }
+@media (width > 900px) {
+  .projects-disclosure summary.action-control {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 16px;
+    padding-block: 28px 30px;
+    border-inline-start: 1px solid var(--button-edge);
+    text-align: center;
+  }
+  .projects-disclosure-chevron {
+    background: var(--action-hover);
+    color: var(--action-focus);
+  }
+}
+@media (width > 900px) and (prefers-reduced-motion: no-preference) {
+  .projects-disclosure:not([open]) > .show-expand-cue .projects-disclosure-chevron {
+    animation: project-expand-cue 580ms ease-in-out 2;
+  }
+}
+@keyframes project-expand-cue {
+  0%, 100% { transform: translateY(0); }
+  55% { transform: translateY(6px); }
+}
 .action-control:focus-visible,
 .nav-list a:focus-visible {
   outline: 2px solid var(--action-focus);

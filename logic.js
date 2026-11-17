@@ -168,6 +168,16 @@
         summary.scrollIntoView({ block: 'start', behavior: 'instant' });
       });
     });
+
+    if (!('IntersectionObserver' in window)) return;
+    const cueObserver = new IntersectionObserver(([entry]) => {
+      summary.classList.toggle('show-expand-cue', !disclosure.open && entry.intersectionRatio >= 0.55);
+    }, { threshold: 0.55 });
+    cueObserver.observe(summary);
+
+    disclosure.addEventListener('toggle', () => {
+      if (disclosure.open) summary.classList.remove('show-expand-cue');
+    });
   };
 
   // ---------- PROJECT SEARCH ----------
